@@ -22,6 +22,7 @@ class Monstro {
     Monstro(short int cabeca, short int caracteristicas);
     Monstro(short int cabeca, short int olhos, short int nariz, short int boca);
     string verNome();
+    void desenharMonstro();
 
     static string nomesCabeca(short int tipo);
     static string nomesCaracteristicas(short int tipo);
@@ -75,6 +76,8 @@ int main() {
     cout<<"Seus olhos são "<<Monstro::nomesCaracteristicas(caracs_escolhidas[0])<<endl;
     cout<<"Seu nariz é "<<Monstro::nomesCaracteristicas(caracs_escolhidas[1])<<endl;
     cout<<"Sua boca é "<<Monstro::nomesCaracteristicas(caracs_escolhidas[2])<<endl;
+
+    monstro_criado.desenharMonstro();
 }
 
 
@@ -179,4 +182,9 @@ string Monstro::nomearMonstro() {
     }
 
     return nomesCabeca(cabeca)+" "+nomesCaracteristicas(carac_predom);
+}
+
+void Monstro::desenharMonstro() {
+    /*Esta função serve para representar o ato de desenhar o monstro recém-criado, no método discutivo no trabalho (desenhar a cabeça e as características
+    conforme os tipos de cada), porém não será implementada.*/
 }
